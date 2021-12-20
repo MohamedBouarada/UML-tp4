@@ -1,0 +1,22 @@
+package tp4_uml;
+
+public class Fermeture  extends Etat{
+	public Fermeture(PorteGarage p) {
+		super(p);
+		
+	}
+	public void nextState() {
+		p.nextState(new Fermee(p));
+	}
+	public void fermer() {
+		System.out.println("la porte est deja en train de se fermer");
+		
+	}
+	public void ouvrir() {
+		System.out.println("Ouverture de la porte ");
+	}
+	
+	public void afficherEtat(){
+		System.out.println("La porte est en fermeture");
+	}
+}
